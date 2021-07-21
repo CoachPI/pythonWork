@@ -52,3 +52,30 @@ if int(admin)>30:
     print("你可真老，已经"+admin+"岁了。")
 else:
     print("你可真年轻，才"+admin+"岁")
+
+print(_字符串_[0:1]);print(_字符串_[-1],end="-");print(_字符串_[2:])#同一行可显示多个语句，用分号分割
+
+if int(admin)>18 and int(admin)<50:
+    print("你已成年")
+elif int(admin)<18 and int(admin)>0:
+    print("你未成年")
+else:
+    print("你不是人")
+
+#在 python 用 import 或者 from...import 来导入相应的模块。
+
+# 将整个模块(somemodule)导入，格式为： import somemodule
+#
+# 从某个模块中导入某个函数,格式为： from somemodule import somefunction
+#
+# 从某个模块中导入多个函数,格式为： from somemodule import firstfunc, secondfunc, thirdfunc
+#
+# 将某个模块中的全部函数导入，格式为： from somemodule import *
+
+import sys
+print(sys.path)
+for i in sys.argv:
+    print(i)
+
+from sys import  argv,path
+print(argv);print(path)
