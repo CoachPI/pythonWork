@@ -78,5 +78,55 @@ if __name__ == "__main__":
     rw=revertString(abc)
     print(rw)
 
+#Tuple 元组（tuple）与列表类似，不同之处在于元组的元素不能修改。元组写在小括号 () 里，元素之间用逗号隔开。
+#元组中的元素类型也可以不相同：
+tup=(1.5,4+5j,'jjdjdjdj')
+print(tup);print(tup[:]);print(tup[0:3]);print(tup[::-1])
+#tup[0]=2 修改元组内数据会报错 TypeError:'tuple' object does not support item assignment
+#print(tup)
+#虽然tuple的元素不可改变，但它可以包含可变的对象，比如list列表。
+#构造包含 0 个或 1 个元素的元组比较特殊，所以有一些额外的语法规则：
+tup1=()#空元组
+tup2=(20,)#一个元素的元组
+print(tup1+tup2)
+#ps1、与字符串一样，元组的元素不能修改。
+# 2、元组也可以被索引和切片，方法一样。
+# 3、注意构造包含 0 或 1 个元素的元组的特殊语法规则。
+# 4、元组也可以使用+操作符进行拼接。
 
+#set（集合）
+#集合（set）是由一个或数个形态各异的大小整体组成的，构成集合的事物或对象称作元素或是成员。
+# 基本功能是进行成员关系测试和删除重复元素。
+# 可以使用大括号 { } 或者 set() 函数创建集合，注意：创建一个空集合必须用 set() 而不是 { }，因为 { } 是用来创建一个空字典。
+# 创建格式：
+set1={9,6,"jdjdj"}
+set2=set("ddd")
+print(set1);print(set2)
+#set可自动去重
+set3={"123",123,"123",5,8,123,"321"}
+print(set3)
+#判断元素是否在set中
+a=6#input('请输入：')
+if int(a) in set3:
+    print(str(a)+"在set中")
+else:
+    print(str(a)+"不在set中")
+
+#set可以进行集合运算
+_集合1_=set('asdsacvxzcz')
+_集合2_=set('gjlasjdioscz')
+print(_集合2_);print(_集合1_)
+print(_集合2_-_集合1_)#差集
+print(_集合2_|_集合1_)#并集
+print(_集合2_&_集合1_)#交集
+print(_集合2_^_集合1_)#两个集合中不同时存在的元素
+
+#Dictionary 字典
+#字典（dictionary）是Python中另一个非常有用的内置数据类型。
+# 列表是有序的对象集合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取。
+# 字典是一种映射类型，字典用 { } 标识，它是一个无序的 键(key) : 值(value) 的集合。
+# 键(key)必须使用不可变类型。
+# 在同一个字典中，键(key)必须是唯一的。
+dict={'name':'hhh',2:12,'sexy':'男'}
+print(dict);print(dict[2]);print('姓名：'+dict['name']+'-年龄：'+str(dict[2])+'-性别：'+dict['sexy'])
 
