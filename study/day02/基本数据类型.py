@@ -127,6 +127,18 @@ print(_集合2_^_集合1_)#两个集合中不同时存在的元素
 # 字典是一种映射类型，字典用 { } 标识，它是一个无序的 键(key) : 值(value) 的集合。
 # 键(key)必须使用不可变类型。
 # 在同一个字典中，键(key)必须是唯一的。
-dict={'name':'hhh',2:12,'sexy':'男'}
-print(dict);print(dict[2]);print('姓名：'+dict['name']+'-年龄：'+str(dict[2])+'-性别：'+dict['sexy'])
+dict1={'name':'hhh',2:12,'sexy':'男'}
+print(dict1);print(dict1[2]);print('姓名：'+dict1['name']+'-年龄：'+str(dict1[2])+'-性别：'+dict1['sexy'])
+print(dict1.values())#输出所有值
+print(dict1.keys())#输出所有键
+
+#构造函数 dict() 可以直接从键值对序列中构建字典如下
+dict2=dict([('name','1'),('age',12),('sexy','男')])
+dict3=dict(hjy=1,abc=2,jkl=3)
+print(dict2)
+print(dict3)
+print({i:i*2 for i in (1,8,5)})
+#1、字典是一种映射类型，它的元素是键值对。
+# 2、字典的关键字必须为不可变类型，且不能重复。
+# 3、创建空字典使用 { }。
 
