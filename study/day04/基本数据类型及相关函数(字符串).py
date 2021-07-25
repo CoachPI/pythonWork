@@ -106,10 +106,12 @@ print(str.endswith('aaa'));print(str.endswith(list1[2]));print(str.endswith('aaa
 str='shsh\thshs\thshs'
 print(str.expandtabs());print(str.expandtabs(2))
 #str.find(str, beg=0, end=len(string)) 判断字符串中是否包含子字符串，包含返回第一个索引下标，不包含返回-1，可以圈定范围
+#同理还有str.rfind()从右边开始找
 str='aajdjdjdlkaalsl'
-print(str.find('aa'));print(str.find('aa',7,10))
+print(str.find('aa'));print(str.find('aa',7,10));print(str.rfind('aa'))
 #index(str, beg=0, end=len(string)) 与find一样只不过不包含会返回异常
-print(str.index('aa'))
+#同理还有str.rindex()从右边开始找
+print(str.index('aa'));print(str.rindex('aa'))
 #str.isalnum()判断字符串是否由数字和字母组成 str.isalpha()判断字符串是否只由字母和文字组成
 str='assd111-'
 str1='aaasss111'
@@ -135,3 +137,61 @@ tup1=('1','5','6')
 print('-'.join(list1));print('+'.join(set1));print('0'.join(tup1))
 #len()返回字符串长度
 print(len(str))
+
+#str.lower()将字符串中的字母转为小写  str.upper()将字符串中的字转为大写
+str='aaaBBB111'
+print(str.lower());print(str.upper())
+
+#str.lstrip()截掉字符串左边的空格 str.rstrip()截掉字符串右边的空格
+str='   sssss';str1='sss   '
+print(str.lstrip());print(str1.rstrip())
+
+#str.maketrans(intab,outtab) 建立字符串的映射表。intab为输入，outtab为输出
+str='asd';str1='123'
+str3='asssddda'
+trans=str3.maketrans(str,str1)
+print(trans)
+print(str3.translate(trans))
+
+#max(str)返回字符串中最大的字母，min(str)返回字符串中最小的字母 比较的是ASCII码大小
+str='abcdefG'
+print(max(str),ord('f'));print(min(str))
+
+#str.replace(__old=,__new=,max) 用指定字符串替换原字符串，如果有max则替换不超过max次
+str='abccccaaaa'
+print(str.replace('a',' ',2))
+
+#str.split('',num) 指定某个字符进行分割，如果有num则分割成num+1个字符
+#返回的是个序列
+str='1,5,6,6,8,4,89,8'
+print(str.split(','));print(str.split(',',2))
+
+#str.startswith(sub,__start=,__end=) 检查字符串是否以指定字符串开头，是则True 否则False，start和end则是指定范围
+str='abcffgdd'
+print(str.startswith('abc'));print(str.startswith('abc',1,5));print(str.startswith('abc',0))
+
+#str.strip('s')移除字符串首尾的指定字符串只能移除首尾不能移除中间的
+str='----ad-asd-asd-as-da-sd-as-das-----'
+print(str.strip('-'))
+#str.swapcase()  将字符串中大小写互转
+str='aaabbbcccAAAASSSDD'
+print(str.swapcase())
+#str.title()  返回标题化字符串即首字母大写
+#非字母的第一个字母转为大写
+str='sss2aa2a8ggg'
+print(str.title())
+
+#str.translate() 翻译str.maketrans()制作的映射表
+str1='abcd';str2='1234'
+str3='aabbccddeeffgg'
+transtab=str3.maketrans(str1,str2)
+str3=str3.translate(transtab)
+print(str3)
+#str.zfill(width) 返回指定宽的字符串，不够右对齐前面填0
+str='abc'
+print(str.zfill(10))
+
+#str.isdecimal() 检查字符串是否只汗十进制数字 返回true false
+str='165480xAA'
+print(str.isdecimal())
+
