@@ -1,1 +1,2 @@
 # pythonWork
+python自学
