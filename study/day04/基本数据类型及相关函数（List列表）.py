@@ -116,3 +116,8 @@ listC=['小明','小红','男','女',13,14]
 listD=[('姓名：'+x+'性别：'+y+'年龄'+str(z)) for x in listC if x=='小明' for y in listC if y=='男' for z in listC if z==14]
 listE=[('姓名：'+x+'性别：'+y+'年龄'+str(z)) for x in listC if x=='小红' for y in listC if y=='女' for z in listC if z==13]
 print(listD);print(listE)
+
+#列表的切片
+list1=[1,5,8,6,1,'5']
+print(list1[::2])#这样代表将列表的元素每隔一个输出一次
+print(list1[::-1])#倒序输出列表
