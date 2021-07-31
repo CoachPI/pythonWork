@@ -85,3 +85,17 @@ print(testd1.pop('name','闪了'));print(testd1)
 #如果字典已经为空，却调用了此方法，就报出KeyError异常。 按照 LIFO（Last In First Out 后进先出法） 顺序规则，即最末尾的键值对。
 testd2={'name':1,'age':2,'sex':3}
 print(testd2.popitem());print(testd2)
+
+#课后练习
+country={}
+def add(con):
+    if con in country:
+        country[con]+=1
+    else:
+        country[con]=1
+
+add('China')
+add('Japan')
+add('China')
+add('USA')
+print(country);print(len(country))
