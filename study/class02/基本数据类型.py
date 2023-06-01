@@ -1,4 +1,4 @@
-#python允许为多个变量复制
+#python允许为多个变量赋值
 a=b=c=d=5
 print(a,b,c,d)
 a,b,c=1,3.0,"hhh"
@@ -45,7 +45,7 @@ print(1*2,end="-");print(4/2,end="-");print(4//2,end="-");print(2**3)
 #String 字符串
 str1="Lucy-animal"
 
-print(str1[0:-4])
+print(str1[2:-4])
 print(str1[:5])
 print(str1*2)
 print(str1[0:9:2])
@@ -81,7 +81,7 @@ if __name__ == "__main__":
 #Tuple 元组（tuple）与列表类似，不同之处在于元组的元素不能修改。元组写在小括号 () 里，元素之间用逗号隔开。
 #元组中的元素类型也可以不相同：
 tup=(1.5,4+5j,'jjdjdjdj')
-print(tup);print(tup[:]);print(tup[0:3]);print(tup[::-1])
+print(tup);print(tup[:]);print(tup[0:2]);print(tup[::-1])
 #tup[0]=2 修改元组内数据会报错 TypeError:'tuple' object does not support item assignment
 #print(tup)
 #虽然tuple的元素不可改变，但它可以包含可变的对象，比如list列表。
